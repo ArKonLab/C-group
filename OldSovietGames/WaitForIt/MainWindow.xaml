@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WaitForIt"
         mc:Ignorable="d"
+		WindowStyle="None"
         Title="MainWindow" Height="350" Width="525">
 	<Canvas>
 		<Image Source="img/backGround.png" Height="300" Canvas.Left="42" Canvas.Top="10" Width="426"/>
