@@ -24,5 +24,25 @@ namespace WaitForIt
 		{
 			InitializeComponent();
 		}
+
+		private void BtnExit_Click(object sender, RoutedEventArgs e)
+		{
+			this.Close();
+		}
+
+		private void BtnPlayA_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void BtnPlayB_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void BtnSound_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
