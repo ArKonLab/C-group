@@ -6,9 +6,17 @@
         xmlns:local="clr-namespace:WaitForIt"
         mc:Ignorable="d"
 		WindowStyle="None"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="670" Width="1120">
 	<Canvas>
-		<Image Source="img/backGround.png" Height="300" Canvas.Left="42" Canvas.Top="10" Width="426"/>
+		<Image Source="img/backGround.png" Height="519" Canvas.Left="186" Canvas.Top="64" Width="737"/>
+		<Button x:Name="btnExit" Content="Выход" Canvas.Left="8" Canvas.Top="10" Width="131" Click="BtnExit_Click" Height="78" FontSize="36"/>
+		<Button x:Name="btnSound" Content="Звук" Canvas.Left="967" Canvas.Top="236" Width="131" Height="78" FontSize="36" Click="BtnSound_Click"/>
+		<Button x:Name="btnLeftTop" Content="&lt;&lt;" Canvas.Left="8" Canvas.Top="360" Width="131" Height="78" FontSize="36"/>
+		<Button x:Name="btnLeftDown" Content="&lt;&lt;" Canvas.Left="8" Canvas.Top="548" Width="131" Height="78" FontSize="36"/>
+		<Button x:Name="btnRightTop" Content="&gt;&gt;" Canvas.Left="967" Canvas.Top="360" Width="131" Height="78" FontSize="36"/>
+		<Button x:Name="btnRightDown" Content="&gt;&gt;" Canvas.Left="967" Canvas.Top="548" Width="131" Height="78" FontSize="36"/>
+		<Button x:Name="btnPlayA" Content="Игра А" Canvas.Left="967" Canvas.Top="10" Width="131" Height="78" FontSize="36" Click="BtnPlayA_Click"/>
+		<Button x:Name="btnPlayB" Content="Игра Б" Canvas.Left="967" Canvas.Top="116" Width="131" Height="78" FontSize="36" Click="BtnPlayB_Click"/>
 
 	</Canvas>
 </Window>
