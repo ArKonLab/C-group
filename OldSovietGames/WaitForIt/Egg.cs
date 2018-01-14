@@ -13,9 +13,7 @@ namespace WaitForIt
     {
 		private int position;
 
-		public Egg() {} // закрытый пустой конструктор
-
-		public Egg(Canvas canvas)
+		public Egg()
 		{
 			// подключаем изображение
 			Source = new BitmapImage( new Uri(@"img/egg_left_down_1.png", UriKind.RelativeOrAbsolute));
@@ -58,7 +56,7 @@ namespace WaitForIt
 					break;
 			}
 			 
-			canvas.Children.Add(this);
+			MainWindow.canvas2.Children.Add(this);
 		}
 
 		public int GetPosition()
