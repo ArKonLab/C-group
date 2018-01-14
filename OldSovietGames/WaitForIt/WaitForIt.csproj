@@ -58,6 +58,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="AnimationLD.cs" />
+    <Compile Include="AnimationLT.cs" />
+    <Compile Include="AnimationRD.cs" />
+    <Compile Include="AnimationRT.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
