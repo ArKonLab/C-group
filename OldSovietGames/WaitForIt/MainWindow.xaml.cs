@@ -22,10 +22,12 @@ namespace WaitForIt
 	{
         SoundModule sound = new SoundModule();
 		static public int time = 1;
+		static public Canvas canvas2 = new Canvas();
         
 		public MainWindow()
 		{
 			InitializeComponent();
+			canvas.Children.Add(canvas2);
 		}
 
 		private void BtnExit_Click(object sender, RoutedEventArgs e)
@@ -35,7 +37,8 @@ namespace WaitForIt
 
 		private void BtnPlayA_Click(object sender, RoutedEventArgs e)
 		{
-            GameParams gParamsA = new GameParams(canvas);
+            GameParams gParamsA = new GameParams();
+			gParamsA.Start();
             #region GameA
             //Задаем параметры игры А
 
