@@ -20,6 +20,5 @@
 		<Button x:Name="btnRightDown" Content="&gt;&gt;" Canvas.Left="979" Canvas.Top="548" Width="131" Height="78" FontSize="36" Click="btnRightDown_Click"/>
 		<Button x:Name="btnPlayA" Content="Игра А" Canvas.Left="979" Canvas.Top="10" Width="131" Height="78" FontSize="36" Click="BtnPlayA_Click"/>
 		<Button x:Name="btnPlayB" Content="Игра Б" Canvas.Left="979" Canvas.Top="110" Width="131" Height="78" FontSize="36" Click="BtnPlayB_Click"/>
-		<Label x:Name="Label1" Content="Label1" Canvas.Left="557" Canvas.Top="209" FontSize="48" Width="181"/>
 	</Canvas>
 </Window>
