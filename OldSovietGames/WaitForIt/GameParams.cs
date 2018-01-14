@@ -10,20 +10,19 @@ namespace WaitForIt
 {
     class GameParams: DispatcherTimer
     {
-        public Int32 t = 0;
-        
-        public GameParams(Canvas canvas, int timeKoef = 600)
-        {
-			Tick += timer_tick;
-			Interval = new TimeSpan(100000 * timeKoef);
-			Start();
+		public GameParams(int timeKoef = 400)
+		{
+			// Первое яйцо создается сразу, без ожидания первого тика
+			Egg egg = new Egg();
 
-			void timer_tick(object sender, EventArgs e)
-			{
-				Egg egg = new Egg(canvas);
-			}
+			Tick += timer_tick; // Подключаем к событию обработчик
+			Interval = new TimeSpan(100000 * timeKoef); // задаем интервал таймера
 		}
 
-		
-    }
+		// Обработчик события Tick таймера
+		void timer_tick(object sender, EventArgs e)
+		{
+			Egg egg = new Egg();
+		}
+	}
 }
