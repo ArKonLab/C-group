@@ -24,18 +24,18 @@ namespace WaitForIt
             SoundIsOn = true;
 
             sndEggMove = new MediaPlayer();
-            sndEggMove.Open(new Uri(@"../../Sound/eggMove.mp3", UriKind.Relative));
+            sndEggMove.Open(new Uri(@"Sound/eggMove.mp3", UriKind.Relative));
             //Долго долбался с URI. Это ВРЕМЕННОЕ решение, потому что здесь стоит относительный путь, отсчитывающийся от местоположения экзешника.
             //Т.е. "выйти на две папки наверх и там найти папку Sound". После финальной сборки приложения папку надо будет перенести в другое место. Скорее всего будет что-то вида new Uri(@"Sound/eggMove.mp3", UriKind.Relative)
 
             sndEggBreak = new MediaPlayer();
-            sndEggBreak.Open(new Uri(@"../../Sound/eggBreak.mp3", UriKind.Relative));
+            sndEggBreak.Open(new Uri(@"Sound/eggBreak.mp3", UriKind.Relative));
 
             sndEggCatch = new MediaPlayer();
-            sndEggCatch.Open(new Uri(@"../../Sound/eggCatch.mp3", UriKind.Relative));
+            sndEggCatch.Open(new Uri(@"Sound/eggCatch.mp3", UriKind.Relative));
 
             sndGameOver = new MediaPlayer();
-            sndGameOver.Open(new Uri(@"../../Sound/gameOver.mp3", UriKind.Relative));            
+            sndGameOver.Open(new Uri(@"Sound/gameOver.mp3", UriKind.Relative));            
         }
 
         /// <summary>
