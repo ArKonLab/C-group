@@ -30,10 +30,10 @@ namespace WaitForIt
 					// начальные координаты для левого верхнего положения
 					Canvas.SetLeft(this, 225);
 					Canvas.SetTop(this, 207);
-					AnimationLT animation = new AnimationLT(this);
-					this.BeginAnimation(Canvas.TopProperty, animation);
-					AnimationLD animationLD = new AnimationLD(this);
-					this.BeginAnimation(Canvas.LeftProperty, animationLD);
+					AnimationLTT animationLTT = new AnimationLTT(this);
+					this.BeginAnimation(Canvas.TopProperty, animationLTT);
+					AnimationLTL animationLTL = new AnimationLTL(this);
+					this.BeginAnimation(Canvas.LeftProperty, animationLTL);
 					break;
 
 				case 2:

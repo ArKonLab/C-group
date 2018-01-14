@@ -56,12 +56,13 @@
     </ApplicationDefinition>
     <Compile Include="GameParams.cs" />
     <Compile Include="SoundModule.cs" />
+    <Compile Include="Woolf.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="AnimationLD.cs" />
-    <Compile Include="AnimationLT.cs" />
+    <Compile Include="AnimationLTL.cs" />
+    <Compile Include="AnimationLTT.cs" />
     <Compile Include="AnimationRD.cs" />
     <Compile Include="AnimationRT.cs" />
     <Compile Include="App.xaml.cs">
