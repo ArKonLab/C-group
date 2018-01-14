@@ -21,6 +21,7 @@ namespace WaitForIt
 	public partial class MainWindow : Window
 	{
         SoundModule sound = new SoundModule();
+		static public int time = 1;
         
 		public MainWindow()
 		{

@@ -18,12 +18,12 @@ namespace WaitForIt
 		DiscreteDoubleKeyFrame keyFrame5;
 		DiscreteDoubleKeyFrame keyFrame6;
 
-		static public int time = 1;
+		//static public int time = 1;
 
 		public AnimationLT(Egg egg)
 		{
 			keyFrame1 = new DiscreteDoubleKeyFrame();
-			keyFrame1.KeyTime = TimeSpan.FromSeconds(time);
+			keyFrame1.KeyTime = TimeSpan.FromSeconds(MainWindow.time);
 			keyFrame1.Value = Canvas.GetTop(egg);
 			KeyFrames.Add(keyFrame1);
 
