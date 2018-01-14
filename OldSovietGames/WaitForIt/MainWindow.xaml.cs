@@ -20,6 +20,8 @@ namespace WaitForIt
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+        SoundModule sound = new SoundModule();
+        
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -32,17 +34,15 @@ namespace WaitForIt
 
 		private void BtnPlayA_Click(object sender, RoutedEventArgs e)
 		{
-
 		}
 
 		private void BtnPlayB_Click(object sender, RoutedEventArgs e)
 		{
-
 		}
 
 		private void BtnSound_Click(object sender, RoutedEventArgs e)
 		{
-
+            sound.SwitchSoundOnOff();
 		}
 	}
 }
