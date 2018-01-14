@@ -34,13 +34,27 @@ namespace WaitForIt
 
 		private void BtnPlayA_Click(object sender, RoutedEventArgs e)
 		{
-		}
+            GameParams gParamsA = new GameParams();
+            gParamsA.Timer(100);                                        //инициализируем и запускаем таймер с текущим периодом 1 с
+            #region GameA
+            //Задаем параметры игры А
 
-		private void BtnPlayB_Click(object sender, RoutedEventArgs e)
+
+            #endregion
+        }
+
+        private void BtnPlayB_Click(object sender, RoutedEventArgs e)
 		{
-		}
+            GameParams gParamsB = new GameParams();
+            gParamsB.Timer(100);                                        //инициализируем и запускаем таймер с текущим периодом 1 с
+            #region GameB
+            //Задаем параметры игры B
 
-		private void BtnSound_Click(object sender, RoutedEventArgs e)
+
+            #endregion
+        }
+
+        private void BtnSound_Click(object sender, RoutedEventArgs e)
 		{
             sound.SwitchSoundOnOff();
 		}
