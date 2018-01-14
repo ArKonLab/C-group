@@ -10,7 +10,7 @@
 		WindowStartupLocation="CenterScreen"
 		Background="DarkGray"
         Title="MainWindow" Height="670" Width="1120">
-    <Canvas>
+    <Canvas x:Name="canvas">
         <Image Source="img/backGround.png" Height="519" Canvas.Left="186" Canvas.Top="64" Width="737"/>
         <Button x:Name="btnExit" Content="Выход" Canvas.Left="10" Canvas.Top="10" Width="131" Click="BtnExit_Click" Height="78" FontSize="36"/>
         <Button x:Name="btnSound" Content="Звук" Canvas.Left="979" Canvas.Top="212" Width="131" Height="78" FontSize="36" Click="BtnSound_Click"/>
@@ -21,6 +21,5 @@
         <Button x:Name="btnPlayA" Content="Игра А" Canvas.Left="979" Canvas.Top="10" Width="131" Height="78" FontSize="36" Click="BtnPlayA_Click"/>
         <Button x:Name="btnPlayB" Content="Игра Б" Canvas.Left="979" Canvas.Top="110" Width="131" Height="78" FontSize="36" Click="BtnPlayB_Click"/>
         <Label x:Name="Label1" Content="Label1" Canvas.Left="557" Canvas.Top="209" FontSize="48" Width="181"/>
-
-    </Canvas>
+	</Canvas>
 </Window>

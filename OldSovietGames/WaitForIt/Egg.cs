@@ -9,12 +9,19 @@ using System.Windows.Media.Imaging;
 
 namespace WaitForIt
 {
-    class Egg: Image
+    class Egg: Image 
     {
-		public Egg(Canvas canvas, int position)
+		private int position;
+
+		private Egg() {} // закрытый пустой конструктор
+
+		public Egg(Canvas canvas)
 		{
 			// подключаем изображение
 			Source = new BitmapImage( new Uri(@"img/egg_left_down_1.png", UriKind.RelativeOrAbsolute));
+
+			Random random = new Random();
+			position = random.Next(1, 5);
 
 			switch (position)
 			{
@@ -47,6 +54,11 @@ namespace WaitForIt
 			}
 			 
 			canvas.Children.Add(this);
+		}
+
+		public int GetPosition()
+		{
+			return position;
 		}
     }
 }
