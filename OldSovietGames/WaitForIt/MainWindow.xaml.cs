@@ -52,5 +52,25 @@ namespace WaitForIt
 		{
             sound.SwitchSoundOnOff();
 		}
-	}
+
+        private void btnLeftTop_Click(object sender, RoutedEventArgs e)
+        {
+            Woolf.woolfImage(1);
+        }
+
+        private void btnLeftDown_Click(object sender, RoutedEventArgs e)
+        {
+            Woolf.woolfImage(2);
+        }
+
+        private void btnRightTop_Click(object sender, RoutedEventArgs e)
+        {
+            Woolf.woolfImage(3);
+        }
+
+        private void btnRightDown_Click(object sender, RoutedEventArgs e)
+        {
+            Woolf.woolfImage(4);
+        }
+    }
 }
