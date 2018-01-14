@@ -34,8 +34,7 @@ namespace WaitForIt
 
 		private void BtnPlayA_Click(object sender, RoutedEventArgs e)
 		{
-            GameParams gParamsA = new GameParams();
-            gParamsA.Timer(100);                                        //инициализируем и запускаем таймер с текущим периодом 1 с
+            GameParams gParamsA = new GameParams(canvas);
             #region GameA
             //Задаем параметры игры А
 
@@ -45,13 +44,7 @@ namespace WaitForIt
 
         private void BtnPlayB_Click(object sender, RoutedEventArgs e)
 		{
-            GameParams gParamsB = new GameParams();
-            gParamsB.Timer(100);                                        //инициализируем и запускаем таймер с текущим периодом 1 с
-            #region GameB
-            //Задаем параметры игры B
 
-
-            #endregion
         }
 
         private void BtnSound_Click(object sender, RoutedEventArgs e)

@@ -13,7 +13,7 @@ namespace WaitForIt
     {
 		private int position;
 
-		private Egg() {} // закрытый пустой конструктор
+		public Egg() {} // закрытый пустой конструктор
 
 		public Egg(Canvas canvas)
 		{
@@ -21,14 +21,19 @@ namespace WaitForIt
 			Source = new BitmapImage( new Uri(@"img/egg_left_down_1.png", UriKind.RelativeOrAbsolute));
 
 			Random random = new Random();
-			position = random.Next(1, 5);
+			//position = random.Next(1, 5);
+			position = random.Next(1, 2);
 
 			switch (position)
 			{
 				case 1:
 					// начальные координаты для левого верхнего положения
-					Canvas.SetLeft(this, 195);
-					Canvas.SetTop(this, 205);
+					Canvas.SetLeft(this, 225);
+					Canvas.SetTop(this, 207);
+					AnimationLT animation = new AnimationLT(this);
+					this.BeginAnimation(Canvas.TopProperty, animation);
+					AnimationLD animationLD = new AnimationLD(this);
+					this.BeginAnimation(Canvas.LeftProperty, animationLD);
 					break;
 
 				case 2:
