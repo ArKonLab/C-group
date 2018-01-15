@@ -9,7 +9,7 @@
 		ResizeMode="NoResize"
 		WindowStartupLocation="CenterScreen"
 		Background="DarkGray"
-        Title="MainWindow" Height="670" Width="1120">
+        Title="MainWindow" Height="670" Width="1120" KeyDown="Window_KeyDown">
     <Canvas x:Name="canvas">
         <Image Source="img/backGround.png" Height="519" Canvas.Left="186" Canvas.Top="64" Width="737"/>
         <Button x:Name="btnExit" Content="Выход" Canvas.Left="10" Canvas.Top="10" Width="131" Click="BtnExit_Click" Height="78" FontSize="36"/>
