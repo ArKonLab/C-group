@@ -23,14 +23,19 @@ namespace WaitForIt
         SoundModule sound = new SoundModule();
 		static public int time = 1;
 		static public Canvas canvas2 = new Canvas();
-        
-		public MainWindow()
-		{
-			InitializeComponent();
-			canvas.Children.Add(canvas2);
-		}
+        static public Canvas canvas3 = new Canvas();
 
-		private void BtnExit_Click(object sender, RoutedEventArgs e)
+        public MainWindow()
+        {
+            InitializeComponent();
+            canvas.Children.Add(canvas2);
+            canvas.Children.Add(canvas3);
+            Woolf.wolf_add(237, 339, @"img/wolf_left_top.png", 339, 209);
+           
+        }
+               
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
 		{
 			this.Close();
 		}
@@ -59,38 +64,26 @@ namespace WaitForIt
         private void btnLeftTop_Click(object sender, RoutedEventArgs e)
         {
             Woolf.woolfImage(1);
-            wolf_ld.Visibility = Visibility.Collapsed;
-            wolf_lt.Visibility = Visibility.Visible;
-            wolf_rd.Visibility = Visibility.Collapsed;
-            wolf_rt.Visibility = Visibility.Collapsed;
+           
             
         }
 
         private void btnLeftDown_Click(object sender, RoutedEventArgs e)
         {
             Woolf.woolfImage(2);
-            wolf_ld.Visibility = Visibility.Visible;
-            wolf_lt.Visibility = Visibility.Collapsed;
-            wolf_rd.Visibility = Visibility.Collapsed;
-            wolf_rt.Visibility = Visibility.Collapsed;
+           
         }
 
         private void btnRightTop_Click(object sender, RoutedEventArgs e)
         {
             Woolf.woolfImage(3);
-            wolf_ld.Visibility = Visibility.Collapsed;
-            wolf_lt.Visibility = Visibility.Collapsed;
-            wolf_rd.Visibility = Visibility.Collapsed;
-            wolf_rt.Visibility = Visibility.Visible;
+          
         }
 
         private void btnRightDown_Click(object sender, RoutedEventArgs e)
         {
             Woolf.woolfImage(4);
-            wolf_ld.Visibility = Visibility.Collapsed;
-            wolf_lt.Visibility = Visibility.Collapsed;
-            wolf_rd.Visibility = Visibility.Visible;
-            wolf_rt.Visibility = Visibility.Collapsed;
+           
         }
     }
 }
