@@ -20,7 +20,7 @@ namespace WaitForIt
 
 			Random random = new Random();
 			//position = random.Next(1, 5);
-			position = random.Next(1, 2);
+			position = random.Next(1, 3);
 
 			switch (position)
 			{
@@ -36,8 +36,12 @@ namespace WaitForIt
 
 				case 2:
 					// начальные координаты для левого нижнего положения
-					Canvas.SetLeft(this, 195);
-					Canvas.SetTop(this, 327);
+					Canvas.SetLeft(this, 225);
+					Canvas.SetTop(this, 330);
+                    animationLTT = new AnimationLTT(this);
+					this.BeginAnimation(Canvas.TopProperty, animationLTT);
+					animationLTL = new AnimationLTL(this);
+					this.BeginAnimation(Canvas.LeftProperty, animationLTL);
 					break;
 
 				case 3:
