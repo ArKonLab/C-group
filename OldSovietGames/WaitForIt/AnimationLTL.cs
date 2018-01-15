@@ -35,12 +35,12 @@ namespace WaitForIt
 
 			keyFrame4 = new DiscreteDoubleKeyFrame();
 			keyFrame4.KeyTime = TimeSpan.FromSeconds(MainWindow.time * 3);
-			keyFrame4.Value = Canvas.GetLeft(egg) + 63;
+			keyFrame4.Value = Canvas.GetLeft(egg) + 78;
 			KeyFrames.Add(keyFrame4);
 
 			keyFrame5 = new DiscreteDoubleKeyFrame();
 			keyFrame5.KeyTime = TimeSpan.FromSeconds(MainWindow.time * 4);
-			keyFrame5.Value = Canvas.GetLeft(egg) + 74;
+			keyFrame5.Value = Canvas.GetLeft(egg) + 104;
 			KeyFrames.Add(keyFrame5);
 
 			keyFrame6 = new DiscreteDoubleKeyFrame();

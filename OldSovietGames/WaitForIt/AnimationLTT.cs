@@ -43,7 +43,7 @@ namespace WaitForIt
 
 			keyFrame5 = new DiscreteDoubleKeyFrame();
 			keyFrame5.KeyTime = TimeSpan.FromSeconds(MainWindow.time * 4);
-			keyFrame5.Value = Canvas.GetTop(egg) + 43;
+			keyFrame5.Value = Canvas.GetTop(egg) + 61;
 			KeyFrames.Add(keyFrame5);
 
 			keyFrame6 = new DiscreteDoubleKeyFrame();
