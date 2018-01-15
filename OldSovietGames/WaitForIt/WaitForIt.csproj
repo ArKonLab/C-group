@@ -108,6 +108,10 @@
     <Resource Include="img\egg_left_down_1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="img\wolf_left_down.png" />
+    <Resource Include="img\wolf_left_top.png" />
+    <Resource Include="img\wolf_right_down.png" />
+    <Resource Include="img\wolf_right_top.png" />
     <Content Include="Sound\chickRun.mp3" />
     <Content Include="Sound\eggBreak.mp3" />
     <Content Include="Sound\eggCatch.mp3" />

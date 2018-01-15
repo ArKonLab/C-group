@@ -59,21 +59,38 @@ namespace WaitForIt
         private void btnLeftTop_Click(object sender, RoutedEventArgs e)
         {
             Woolf.woolfImage(1);
+            wolf_ld.Visibility = Visibility.Collapsed;
+            wolf_lt.Visibility = Visibility.Visible;
+            wolf_rd.Visibility = Visibility.Collapsed;
+            wolf_rt.Visibility = Visibility.Collapsed;
+            
         }
 
         private void btnLeftDown_Click(object sender, RoutedEventArgs e)
         {
             Woolf.woolfImage(2);
+            wolf_ld.Visibility = Visibility.Visible;
+            wolf_lt.Visibility = Visibility.Collapsed;
+            wolf_rd.Visibility = Visibility.Collapsed;
+            wolf_rt.Visibility = Visibility.Collapsed;
         }
 
         private void btnRightTop_Click(object sender, RoutedEventArgs e)
         {
             Woolf.woolfImage(3);
+            wolf_ld.Visibility = Visibility.Collapsed;
+            wolf_lt.Visibility = Visibility.Collapsed;
+            wolf_rd.Visibility = Visibility.Collapsed;
+            wolf_rt.Visibility = Visibility.Visible;
         }
 
         private void btnRightDown_Click(object sender, RoutedEventArgs e)
         {
             Woolf.woolfImage(4);
+            wolf_ld.Visibility = Visibility.Collapsed;
+            wolf_lt.Visibility = Visibility.Collapsed;
+            wolf_rd.Visibility = Visibility.Visible;
+            wolf_rt.Visibility = Visibility.Collapsed;
         }
     }
 }

@@ -20,5 +20,11 @@
 		<Button x:Name="btnRightDown" Content="&gt;&gt;" Canvas.Left="979" Canvas.Top="548" Width="131" Height="78" FontSize="36" Click="btnRightDown_Click"/>
 		<Button x:Name="btnPlayA" Content="Игра А" Canvas.Left="979" Canvas.Top="10" Width="131" Height="78" FontSize="36" Click="BtnPlayA_Click"/>
 		<Button x:Name="btnPlayB" Content="Игра Б" Canvas.Left="979" Canvas.Top="110" Width="131" Height="78" FontSize="36" Click="BtnPlayB_Click"/>
+        <Label x:Name="Label1" Content="Label1" Canvas.Left="557" Canvas.Top="209" FontSize="48" Width="181"/>
+        <Image x:Name="wolf_ld" Height="339" Canvas.Left="339" Canvas.Top="209" Width="237" Source="img/wolf_left_down.png"/>
+        <Image x:Name="wolf_lt" Height="339" Canvas.Left="339" Canvas.Top="209" Width="237" Source="img/wolf_left_top.png"/>
+        <Image x:Name="wolf_rt" Height="336" Canvas.Left="557" Canvas.Top="212" Width="211" Source="img/wolf_right_top.png"/>
+        <Image x:Name="wolf_rd" Height="336" Canvas.Left="557" Canvas.Top="212" Width="211" Source="img/wolf_right_down.png"/>
+
 	</Canvas>
 </Window>
