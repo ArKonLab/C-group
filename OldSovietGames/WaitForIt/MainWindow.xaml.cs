@@ -85,5 +85,22 @@ namespace WaitForIt
             Woolf.woolfImage(4);
            
         }
+        
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Key.D: Woolf.woolfImage(3); break;
+                case Key.A: Woolf.woolfImage(1); break;
+                case Key.W: Woolf.woolfImage(2); break;
+                case Key.S: Woolf.woolfImage(4); break;
+                case Key.R: Woolf.woolfImage(1); break;
+                case Key.F: Woolf.woolfImage(2); break;
+                case Key.O: Woolf.woolfImage(3); break;
+                case Key.K: Woolf.woolfImage(4); break;
+                default:
+                    break;
+            }
+        }
     }
 }
