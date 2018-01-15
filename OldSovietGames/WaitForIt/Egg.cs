@@ -19,8 +19,8 @@ namespace WaitForIt
 			Source = new BitmapImage( new Uri(@"img/egg_left_down_1.png", UriKind.RelativeOrAbsolute));
 
 			Random random = new Random();
-			//position = random.Next(1, 5);
-			position = random.Next(1, 3);
+			position = random.Next(1, 5);
+			
 
 			switch (position)
 			{
@@ -46,15 +46,23 @@ namespace WaitForIt
 
 				case 3:
 					// начальные координаты для правого верхнего положения
-					Canvas.SetLeft(this, 896);
+					Canvas.SetLeft(this, 875);
 					Canvas.SetTop(this, 205);
-					break;
+                    AnimationRT animationRT = new AnimationRT(this);
+                    this.BeginAnimation(Canvas.TopProperty, animationRT);
+                    AnimationRL animationRL = new AnimationRL(this);
+                    this.BeginAnimation(Canvas.LeftProperty, animationRL);
+                    break;
 
 				case 4:
 					// начальные координаты для правого нижнего положения
-					Canvas.SetLeft(this, 896);
+					Canvas.SetLeft(this, 875);
 					Canvas.SetTop(this, 327);
-					break;
+                    animationRT = new AnimationRT(this);
+                    this.BeginAnimation(Canvas.TopProperty, animationRT);
+                    animationRL = new AnimationRL(this);
+                    this.BeginAnimation(Canvas.LeftProperty, animationRL);
+                    break;
 
 				default:
 					break;

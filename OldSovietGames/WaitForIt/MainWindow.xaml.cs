@@ -30,8 +30,8 @@ namespace WaitForIt
             InitializeComponent();
             canvas.Children.Add(canvas2);
             canvas.Children.Add(canvas3);
-            Woolf.wolf_add(237, 339, @"img/wolf_left_top.png", 339, 209);
-           
+            Woolf.wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
+
         }
                
 

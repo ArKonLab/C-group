@@ -37,10 +37,10 @@ namespace WaitForIt
                 case 1:         //Нажатие левой верхней кнопки
                    //Вставляем изображение волка лево вверх
                     woolf.position = 1;
-                    Woolf.wolf_add(237, 339, @"img/wolf_left_top.png", 339, 209);
+                    Woolf.wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
                     break;
                 case 2:         //Нажатие левой нижней кнопки
-                    Woolf.wolf_add(237, 339, @"img/wolf_left_down.png", 339, 209);
+                    Woolf.wolf_add(226, 339, @"img/wolf_left_down.png", 345, 209);
                     woolf.position = 2;
                     break;
                 case 3:         //Нажатие правой верхней кнопки
