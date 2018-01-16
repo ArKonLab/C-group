@@ -15,24 +15,25 @@ using System.Windows.Shapes;
 
 namespace WaitForIt
 {
-	/// <summary>
-	/// Логика взаимодействия для MainWindow.xaml
-	/// </summary>
-	public partial class MainWindow : Window
+   
+    /// <summary>
+    /// Логика взаимодействия для MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
 	{
         SoundModule sound = new SoundModule();
 		static public int time = 1;
 		static public Canvas canvas2 = new Canvas();
         static public Canvas canvas3 = new Canvas();
+        static public int wolf_position = 1;
+
 
         public MainWindow()
         {
             InitializeComponent();
             canvas.Children.Add(canvas2);
             canvas.Children.Add(canvas3);
-            Woolf wolf = new Woolf();
-			wolf.wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
-           
+            Woolf.wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
 
         }
                
@@ -65,31 +66,29 @@ namespace WaitForIt
 
         private void btnLeftTop_Click(object sender, RoutedEventArgs e)
         {
-            Woolf wolf = new Woolf();
-            wolf.woolfImage(1);
-           
+          
+            Woolf.woolfImage(1);
             
         }
 
         private void btnLeftDown_Click(object sender, RoutedEventArgs e)
         {
-            Woolf wolf = new Woolf();
-            wolf.woolfImage(2);
-
+            
+            Woolf.woolfImage(2);
+            
         }
 
         private void btnRightTop_Click(object sender, RoutedEventArgs e)
         {
-            Woolf wolf = new Woolf();
-            wolf.woolfImage(3);
-
+           
+            Woolf.woolfImage(3);
+           
         }
 
         private void btnRightDown_Click(object sender, RoutedEventArgs e)
         {
-            Woolf wolf = new Woolf();
-            wolf.woolfImage(4);
-
+            
+            Woolf.woolfImage(4);
         }
         
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -97,17 +96,18 @@ namespace WaitForIt
             Woolf wolf = new Woolf();
             switch (e.Key)
             {
-                case Key.D: wolf.woolfImage(3); break;
-                case Key.A: wolf.woolfImage(1); break;
-                case Key.W: wolf.woolfImage(2); break;
-                case Key.S: wolf.woolfImage(4); break;
-                case Key.R: wolf.woolfImage(1); break;
-                case Key.F: wolf.woolfImage(2); break;
-                case Key.O: wolf.woolfImage(3); break;
-                case Key.K: wolf.woolfImage(4); break;
+                case Key.D: Woolf.woolfImage(3); break;
+                case Key.A: Woolf.woolfImage(1); break;
+                case Key.W: Woolf.woolfImage(2); break;
+                case Key.S: Woolf.woolfImage(4); break;
+                case Key.R: Woolf.woolfImage(1); break;
+                case Key.F: Woolf.woolfImage(2); break;
+                case Key.O: Woolf.woolfImage(3); break;
+                case Key.K: Woolf.woolfImage(4); break;
                 default:
                     break;
             }
+            
         }
     }
 }
