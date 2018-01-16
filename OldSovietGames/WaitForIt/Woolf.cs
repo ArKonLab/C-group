@@ -16,7 +16,7 @@ namespace WaitForIt
         public int position;
         public Woolf() { }
        
-        static public void wolf_add(int width, int height, string sourse, int left, int top)
+        public void wolf_add(int width, int height, string sourse, int left, int top)
         {
             Image wolf = new Image();
             wolf.Width = width;
@@ -27,7 +27,7 @@ namespace WaitForIt
             MainWindow.canvas3.Children.Add(wolf);
         }
 
-        public static void woolfImage(short keyIndex)
+        public void woolfImage(short keyIndex)
         {
             MainWindow.canvas3.Children.Clear();
             var woolf = new Woolf();
