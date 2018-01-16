@@ -14,6 +14,7 @@ namespace WaitForIt
     class Woolf
     {
         public int position;
+        
         public Woolf() { }
        
         public static void wolf_add(int width, int height, string sourse, int left, int top)
@@ -26,8 +27,7 @@ namespace WaitForIt
             Canvas.SetTop(wolf, top);
             MainWindow.canvas3.Children.Add(wolf);
         }
-
-
+       
         public static void woolfImage(short keyIndex)
         {
             MainWindow.canvas3.Children.Clear();

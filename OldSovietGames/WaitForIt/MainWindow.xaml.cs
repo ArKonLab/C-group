@@ -27,6 +27,7 @@ namespace WaitForIt
 		static public Canvas canvas2 = new Canvas();
         static public Canvas canvas3 = new Canvas();
         static public Label score_label = new Label();
+        static public int x = 710;
         static public int wolf_position = 1;
         static public int score = 0;
         static public int life = 3;

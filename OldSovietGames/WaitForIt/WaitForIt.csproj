@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Crush.cs" />
     <Compile Include="GameParams.cs" />
     <Compile Include="SoundModule.cs" />
     <Compile Include="Woolf.cs" />

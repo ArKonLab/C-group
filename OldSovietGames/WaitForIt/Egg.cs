@@ -14,6 +14,7 @@ namespace WaitForIt
     class Egg: Image 
     {
 		public int position;
+       
 
 		public Egg()
 		{
@@ -100,7 +101,18 @@ namespace WaitForIt
                 MainWindow.score++;
                 MainWindow.score_label.Content = MainWindow.score;
             }
-            else MainWindow.life--;
+            else
+            {
+               Crush.draw(MainWindow.x,230);
+                MainWindow.x = MainWindow.x - 40;
+            }
+            if(MainWindow.life == 0)
+            {
+                Canvas.SetLeft(MainWindow.score_label, 450);
+                Canvas.SetTop(MainWindow.score_label, 100);
+                MainWindow.score_label.Content = "game over!\nВаш счет - "+ MainWindow.score;
+               
+            }
 		}
 
 		public int GetPosition()
