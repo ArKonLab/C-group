@@ -16,7 +16,7 @@ namespace WaitForIt
         public int position;
         public Woolf() { }
        
-        public static void wolf_add(int width, int height, string sourse, int left, int top)
+        static public void wolf_add(int width, int height, string sourse, int left, int top)
         {
             Image wolf = new Image();
             wolf.Width = width;
@@ -37,18 +37,18 @@ namespace WaitForIt
                 case 1:         //Нажатие левой верхней кнопки
                    //Вставляем изображение волка лево вверх
                     woolf.position = 1;
-                    Woolf.wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
+                    wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
                     break;
                 case 2:         //Нажатие левой нижней кнопки
-                    Woolf.wolf_add(226, 339, @"img/wolf_left_down.png", 345, 209);
+                    wolf_add(226, 339, @"img/wolf_left_down.png", 345, 209);
                     woolf.position = 2;
                     break;
                 case 3:         //Нажатие правой верхней кнопки
-                    Woolf.wolf_add(211, 336, @"img/wolf_right_top.png", 557, 212);
+                    wolf_add(211, 336, @"img/wolf_right_top.png", 557, 212);
                     woolf.position = 3;
                     break;
                 case 4:         //Нажатие правой нижней кнопки
-                    Woolf.wolf_add(211, 336, @"img/wolf_right_down.png", 557, 212);
+                    wolf_add(211, 336, @"img/wolf_right_down.png", 557, 212);
                     woolf.position = 4;
                     break;
                 default:
