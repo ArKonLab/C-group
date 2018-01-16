@@ -103,8 +103,8 @@ namespace WaitForIt
             }
             else
             {
-               Crush.draw(MainWindow.x,230);
-                MainWindow.x = MainWindow.x - 40;
+               Crush.draw();
+                
             }
             if(MainWindow.life == 0)
             {

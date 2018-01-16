@@ -13,17 +13,17 @@ namespace WaitForIt
     class Crush
     {
         
-        public static void draw(int left, int top)
+        public static void draw()
         {
             Image crush = new Image();
             crush.Width = 30;
             crush.Height = 30;
             crush.Source = new BitmapImage(new Uri(@"img/egg_left_down_1.png", UriKind.RelativeOrAbsolute)); // вставить цыпу
-            Canvas.SetLeft(crush, left);
-            Canvas.SetTop(crush, top);
+            Canvas.SetLeft(crush, MainWindow.x);
+            Canvas.SetTop(crush, 230);
             MainWindow.canvas2.Children.Add(crush);
             MainWindow.life--;
-           
+            MainWindow.x = MainWindow.x - 40;
         }
     }
 }
