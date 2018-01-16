@@ -27,6 +27,7 @@ namespace WaitForIt
             MainWindow.canvas3.Children.Add(wolf);
         }
 
+
         public static void woolfImage(short keyIndex)
         {
             MainWindow.canvas3.Children.Clear();

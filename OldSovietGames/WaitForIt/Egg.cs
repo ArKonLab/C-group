@@ -98,7 +98,7 @@ namespace WaitForIt
             if (MainWindow.wolf_position == this.position)
             {
                 MainWindow.score++;
-               
+                MainWindow.score_label.Content = MainWindow.score;
             }
             else MainWindow.life--;
 		}

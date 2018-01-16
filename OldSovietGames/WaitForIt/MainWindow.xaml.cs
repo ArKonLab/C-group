@@ -26,6 +26,7 @@ namespace WaitForIt
 		static public int time = 1;
 		static public Canvas canvas2 = new Canvas();
         static public Canvas canvas3 = new Canvas();
+        static public Label score_label = new Label();
         static public int wolf_position = 1;
         static public int score = 0;
         static public int life = 3;
@@ -36,12 +37,19 @@ namespace WaitForIt
             InitializeComponent();
             canvas.Children.Add(canvas2);
             canvas.Children.Add(canvas3);
-            Woolf.wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
+            canvas.Children.Add(score_label);
+            start_setup();
 
-            
-            
         }
-               
+        private static void start_setup()
+        {
+            score_label.FontSize = 36;
+            score_label.FontWeight = FontWeights.Bold;
+            Canvas.SetLeft(score_label, 630);
+            Canvas.SetTop(score_label, 140);
+            Woolf.wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
+        }
+
 
         private void BtnExit_Click(object sender, RoutedEventArgs e)
 		{
@@ -101,7 +109,6 @@ namespace WaitForIt
         
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            Woolf wolf = new Woolf();
             switch (e.Key)
             {
                 case Key.D: Woolf.woolfImage(3); break;
