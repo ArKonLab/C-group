@@ -7,12 +7,13 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Data;
 
 namespace WaitForIt
 {
     class Egg: Image 
     {
-		private int position;
+		public int position;
 
 		public Egg()
 		{
@@ -37,6 +38,7 @@ namespace WaitForIt
 					this.BeginAnimation(Canvas.TopProperty, animationLTT);
 					animationLTL = new AnimationLTL(this);
 					this.BeginAnimation(Canvas.LeftProperty, animationLTL);
+                    this.position = 1;
 					break;
 
 				case 2:
@@ -48,6 +50,7 @@ namespace WaitForIt
 					this.BeginAnimation(Canvas.TopProperty, animationLTT);
 					animationLTL = new AnimationLTL(this);
 					this.BeginAnimation(Canvas.LeftProperty, animationLTL);
+                    this.position = 2;
 					break;
 
 				case 3:
@@ -59,6 +62,7 @@ namespace WaitForIt
                     this.BeginAnimation(Canvas.TopProperty, animationRT);
                     AnimationRL animationRL = new AnimationRL(this);
                     this.BeginAnimation(Canvas.LeftProperty, animationRL);
+                    this.position = 3;
                     break;
 
 				case 4:
@@ -70,6 +74,7 @@ namespace WaitForIt
 					this.BeginAnimation(Canvas.TopProperty, animationRT);
                     animationRL = new AnimationRL(this);
                     this.BeginAnimation(Canvas.LeftProperty, animationRL);
+                    this.position = 4;
                     break;
 
 				default:
@@ -79,7 +84,8 @@ namespace WaitForIt
 					this.BeginAnimation(Canvas.TopProperty, animationLTT);
 					animationLTL = new AnimationLTL(this);
 					this.BeginAnimation(Canvas.LeftProperty, animationLTL);
-					break;
+                    this.position = 1;
+                    break;
 			}
 			 
 			MainWindow.canvas2.Children.Add(this);
@@ -88,6 +94,13 @@ namespace WaitForIt
 		private void Animation_Completed(object sender, EventArgs e)
 		{
 			MainWindow.canvas2.Children.Remove(this);
+            
+            if (MainWindow.wolf_position == this.position)
+            {
+                MainWindow.score++;
+               
+            }
+            else MainWindow.life--;
 		}
 
 		public int GetPosition()

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WaitForIt
 {
    
@@ -26,8 +27,10 @@ namespace WaitForIt
 		static public Canvas canvas2 = new Canvas();
         static public Canvas canvas3 = new Canvas();
         static public int wolf_position = 1;
+        static public int score = 0;
+        static public int life = 3;
 
-
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +38,8 @@ namespace WaitForIt
             canvas.Children.Add(canvas3);
             Woolf.wolf_add(226, 339, @"img/wolf_left_top.png", 345, 209);
 
+            
+            
         }
                
 
@@ -47,6 +52,7 @@ namespace WaitForIt
 		{
             GameParams gParamsA = new GameParams();
 			gParamsA.Start();
+            score_label.Content = score;
             #region GameA
             //Задаем параметры игры А
 
@@ -68,14 +74,14 @@ namespace WaitForIt
         {
           
             Woolf.woolfImage(1);
-            
+           
         }
 
         private void btnLeftDown_Click(object sender, RoutedEventArgs e)
         {
             
             Woolf.woolfImage(2);
-            
+           
         }
 
         private void btnRightTop_Click(object sender, RoutedEventArgs e)
@@ -83,12 +89,14 @@ namespace WaitForIt
            
             Woolf.woolfImage(3);
            
+
         }
 
         private void btnRightDown_Click(object sender, RoutedEventArgs e)
         {
             
             Woolf.woolfImage(4);
+            
         }
         
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -107,7 +115,9 @@ namespace WaitForIt
                 default:
                     break;
             }
-            
+           
         }
+
+        
     }
 }
