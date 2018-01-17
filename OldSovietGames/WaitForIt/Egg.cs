@@ -151,6 +151,7 @@ namespace WaitForIt
             {
                 MainWindow.score++;
                 MainWindow.score_label.Content = MainWindow.score;
+				GameParams.List.RemoveAt(0);
             }
             else
             {
@@ -169,9 +170,7 @@ namespace WaitForIt
 
 				MainWindow.gParamsA.Stop();
 
-				//MainWindow.score_label.Content = "game over!\nВаш счет - "+ MainWindow.score;
-				MainWindow.score_label.Content = "game over!\nВаш счет - " + list.Count.ToString();
-
+				MainWindow.score_label.Content = "game over!\nВаш счет - "+ MainWindow.score;
 			}
 		}
 
