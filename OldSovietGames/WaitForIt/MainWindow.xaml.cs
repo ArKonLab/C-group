@@ -60,7 +60,7 @@ namespace WaitForIt
 
 		private void BtnPlayA_Click(object sender, RoutedEventArgs e)
 		{
-			gParamsA = new GameParams(150);
+			gParamsA = new GameParams(550);
 			gParamsA.Start();
             score_label.Content = score;
             #region GameA
