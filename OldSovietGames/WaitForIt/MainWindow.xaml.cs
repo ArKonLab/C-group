@@ -72,7 +72,7 @@ namespace WaitForIt
 
         private void BtnPlayB_Click(object sender, RoutedEventArgs e)
 		{
-			Egg.storyboard.Pause();
+			//Egg.storyboard.Pause();
         }
 
         private void BtnSound_Click(object sender, RoutedEventArgs e)

@@ -16,7 +16,7 @@ namespace WaitForIt
     {
 		public int position;
 		public List<Storyboard> list = new List<Storyboard>();
-		static public Storyboard storyboard;
+		public Storyboard storyboard;
 
 
 		public Egg()
@@ -159,7 +159,10 @@ namespace WaitForIt
             }
             if(MainWindow.life == 0)
             {
-				Egg.storyboard.Pause();
+				foreach (Egg l in GameParams.List)
+				{
+					l.storyboard.Pause();
+				}
 
 				Canvas.SetLeft(MainWindow.score_label, 450);
                 Canvas.SetTop(MainWindow.score_label, 100);
