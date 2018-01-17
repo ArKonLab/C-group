@@ -24,6 +24,7 @@ namespace WaitForIt
 	{
         SoundModule sound = new SoundModule();
 		static public int time = 1;
+		static public GameParams gParamsA;
 		static public Canvas canvas2 = new Canvas();
         static public Canvas canvas3 = new Canvas();
         static public Label score_label = new Label();
@@ -59,7 +60,7 @@ namespace WaitForIt
 
 		private void BtnPlayA_Click(object sender, RoutedEventArgs e)
 		{
-            GameParams gParamsA = new GameParams();
+			gParamsA = new GameParams(150);
 			gParamsA.Start();
             score_label.Content = score;
             #region GameA
@@ -71,7 +72,7 @@ namespace WaitForIt
 
         private void BtnPlayB_Click(object sender, RoutedEventArgs e)
 		{
-
+			Egg.storyboard.Pause();
         }
 
         private void BtnSound_Click(object sender, RoutedEventArgs e)
@@ -112,14 +113,11 @@ namespace WaitForIt
         {
             switch (e.Key)
             {
-                case Key.D: Woolf.woolfImage(3); break;
-                case Key.A: Woolf.woolfImage(1); break;
-                case Key.W: Woolf.woolfImage(2); break;
-                case Key.S: Woolf.woolfImage(4); break;
-                case Key.R: Woolf.woolfImage(1); break;
-                case Key.F: Woolf.woolfImage(2); break;
-                case Key.O: Woolf.woolfImage(3); break;
-                case Key.K: Woolf.woolfImage(4); break;
+                
+                case Key.Q: Woolf.woolfImage(1); break;
+                case Key.A: Woolf.woolfImage(2); break;
+				case Key.P: Woolf.woolfImage(3); break;
+				case Key.L: Woolf.woolfImage(4); break;
                 default:
                     break;
             }

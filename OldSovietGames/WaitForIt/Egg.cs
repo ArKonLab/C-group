@@ -8,13 +8,16 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Data;
+using System.Windows.Media.Animation;
 
 namespace WaitForIt
 {
     class Egg: Image 
     {
 		public int position;
-       
+		public List<Storyboard> list = new List<Storyboard>();
+		static public Storyboard storyboard;
+
 
 		public Egg()
 		{
@@ -23,6 +26,8 @@ namespace WaitForIt
 
 			AnimationLTT animationLTT;
 			AnimationLTL animationLTL;
+			AnimationRT animationRT;
+			AnimationRL animationRL;
 
 			Random random = new Random();
 			position = random.Next(1, 5);
@@ -32,13 +37,25 @@ namespace WaitForIt
 			{
 				case 1:
 					// начальные координаты для левого верхнего положения
+
 					Canvas.SetLeft(this, 225);
 					Canvas.SetTop(this, 207);
+
 					animationLTT = new AnimationLTT(this);
 					animationLTT.Completed += Animation_Completed;
-					this.BeginAnimation(Canvas.TopProperty, animationLTT);
+
+					storyboard = new Storyboard();
+
+					storyboard.Children.Add(animationLTT);
+					Storyboard.SetTarget(animationLTT, this);
+					Storyboard.SetTargetProperty(animationLTT, new PropertyPath(Canvas.TopProperty));
+
 					animationLTL = new AnimationLTL(this);
-					this.BeginAnimation(Canvas.LeftProperty, animationLTL);
+					storyboard.Children.Add(animationLTL);
+					Storyboard.SetTarget(animationLTL, this);
+					Storyboard.SetTargetProperty(animationLTL, new PropertyPath(Canvas.LeftProperty));
+
+					storyboard.Begin();
                     this.position = 1;
 					break;
 
@@ -46,36 +63,70 @@ namespace WaitForIt
 					// начальные координаты для левого нижнего положения
 					Canvas.SetLeft(this, 225);
 					Canvas.SetTop(this, 330);
-                    animationLTT = new AnimationLTT(this);
+
+					animationLTT = new AnimationLTT(this);
 					animationLTT.Completed += Animation_Completed;
-					this.BeginAnimation(Canvas.TopProperty, animationLTT);
+
+					storyboard = new Storyboard();
+
+					storyboard.Children.Add(animationLTT);
+					Storyboard.SetTarget(animationLTT, this);
+					Storyboard.SetTargetProperty(animationLTT, new PropertyPath(Canvas.TopProperty));
+
 					animationLTL = new AnimationLTL(this);
-					this.BeginAnimation(Canvas.LeftProperty, animationLTL);
-                    this.position = 2;
+					storyboard.Children.Add(animationLTL);
+					Storyboard.SetTarget(animationLTL, this);
+					Storyboard.SetTargetProperty(animationLTL, new PropertyPath(Canvas.LeftProperty));
+
+					storyboard.Begin();
+					
+					this.position = 2;
 					break;
 
 				case 3:
 					// начальные координаты для правого верхнего положения
 					Canvas.SetLeft(this, 875);
 					Canvas.SetTop(this, 205);
-                    AnimationRT animationRT = new AnimationRT(this);
+
+                    animationRT = new AnimationRT(this);
 					animationRT.Completed += Animation_Completed;
-                    this.BeginAnimation(Canvas.TopProperty, animationRT);
-                    AnimationRL animationRL = new AnimationRL(this);
-                    this.BeginAnimation(Canvas.LeftProperty, animationRL);
-                    this.position = 3;
+
+					storyboard = new Storyboard();
+
+					storyboard.Children.Add(animationRT);
+					Storyboard.SetTarget(animationRT, this);
+					Storyboard.SetTargetProperty(animationRT, new PropertyPath(Canvas.TopProperty));
+
+                    animationRL = new AnimationRL(this);
+					storyboard.Children.Add(animationRL);
+					Storyboard.SetTarget(animationRL, this);
+					Storyboard.SetTargetProperty(animationRL, new PropertyPath(Canvas.LeftProperty));
+
+					storyboard.Begin();
+					this.position = 3;
                     break;
 
 				case 4:
 					// начальные координаты для правого нижнего положения
 					Canvas.SetLeft(this, 875);
 					Canvas.SetTop(this, 327);
-                    animationRT = new AnimationRT(this);
+
+					animationRT = new AnimationRT(this);
 					animationRT.Completed += Animation_Completed;
-					this.BeginAnimation(Canvas.TopProperty, animationRT);
-                    animationRL = new AnimationRL(this);
-                    this.BeginAnimation(Canvas.LeftProperty, animationRL);
-                    this.position = 4;
+
+					storyboard = new Storyboard();
+
+					storyboard.Children.Add(animationRT);
+					Storyboard.SetTarget(animationRT, this);
+					Storyboard.SetTargetProperty(animationRT, new PropertyPath(Canvas.TopProperty));
+
+					animationRL = new AnimationRL(this);
+					storyboard.Children.Add(animationRL);
+					Storyboard.SetTarget(animationRL, this);
+					Storyboard.SetTargetProperty(animationRL, new PropertyPath(Canvas.LeftProperty));
+
+					storyboard.Begin();
+					this.position = 4;
                     break;
 
 				default:
@@ -108,11 +159,17 @@ namespace WaitForIt
             }
             if(MainWindow.life == 0)
             {
-                Canvas.SetLeft(MainWindow.score_label, 450);
+				Egg.storyboard.Pause();
+
+				Canvas.SetLeft(MainWindow.score_label, 450);
                 Canvas.SetTop(MainWindow.score_label, 100);
-                MainWindow.score_label.Content = "game over!\nВаш счет - "+ MainWindow.score;
-               
-            }
+
+				MainWindow.gParamsA.Stop();
+
+				//MainWindow.score_label.Content = "game over!\nВаш счет - "+ MainWindow.score;
+				MainWindow.score_label.Content = "game over!\nВаш счет - " + list.Count.ToString();
+
+			}
 		}
 
 		public int GetPosition()

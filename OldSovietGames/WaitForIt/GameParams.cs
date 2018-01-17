@@ -8,7 +8,7 @@ using System.Windows.Threading;
 
 namespace WaitForIt
 {
-    class GameParams: DispatcherTimer
+    public class GameParams: DispatcherTimer
     {
 		public GameParams(int timeKoef = 400)
 		{
@@ -23,6 +23,7 @@ namespace WaitForIt
 		void timer_tick(object sender, EventArgs e)
 		{
 			Egg egg = new Egg();
+			//egg.list.Add(egg.storyboard);
 		}
 	}
 }
